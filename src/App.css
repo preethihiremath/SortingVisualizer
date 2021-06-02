@@ -1,0 +1,65 @@
+
+.app {
+	text-align: center;
+	background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("https://wallpaperaccess.com/full/1567666.png");
+	margin: 0;
+}
+
+.frame {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:2em 0;
+
+}
+
+.container {
+	margin: 0.5em 0;
+	padding:2em 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 380px;
+	margin-bottom: 4.5em;
+}
+
+.card {
+	border-radius: 2em;
+	padding: 0 0.5em;
+	height: 400px;
+	width:700px;
+	background-color: transparent;
+}
+
+.controller {
+	background: #555;
+	margin: 0 1em;
+	color:#eee;
+	border: 1px solid;
+	height: 4em;
+	width: 4em;
+	border-radius: 100%;
+	background: transparent;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.control-buttons {
+	height: 4em;
+	width: 15em;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.control-pannel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
