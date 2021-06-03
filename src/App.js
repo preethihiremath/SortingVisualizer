@@ -1,12 +1,17 @@
 import React, {Component} from 'react'
 import './App.css';
+
 import BubbleSort from './algorithms/BubbleSort';
+import SelectionSort from './algorithms/SelectionSort';
+
 import Play from '@material-ui/icons/PlayCircleOutlineRounded';
 import Forward from '@material-ui/icons/SkipNextRounded';
 import Backward from '@material-ui/icons/SkipPreviousRounded';
 import RotateLeft from '@material-ui/icons/RotateLeft';
+
 import Bar from './components/Bar';
 import Header from './components/Header'
+
 class App extends Component {
 state ={
 array:[],
@@ -14,25 +19,24 @@ arraySteps:[],
 colorKey:[],
 colorSteps:[],
 currentStep:0,
-count:7,
+count:10,
 delay:100,
-algorithm:'Bubble Sort',
+algorithm:'Selection Sort',
 timeouts:[],
 }
 ALGORITHMS = {
-  'Bubble Sort': BubbleSort,
+  'Selection Sort': SelectionSort,
+ 
 };
-
 componentDidMount(){
   this.generateRandomArray();
 }
+
 generateSteps =()=>{
   let array=this.state.array.slice();
   let steps=this.state.arraySteps.slice();
   let colorSteps=this.state.colorSteps.slice();
-  
   this.ALGORITHMS[this.state.algorithm](array, 0, steps, colorSteps);
-
   this.setState({
     arraySteps: steps,
     colorSteps: colorSteps,
@@ -61,12 +65,13 @@ return Math.floor(Math.random()*(max-min)+min)
 
 generateRandomArray =() =>{
   this.clearColorKey();
-const count=this.state.count;
-const temp=[];
+  const count=this.state.count;
+  const temp=[];
  
 for(let i=0;i<count;i++){
   temp.push(this.generateRandomNumber(0,200));
 }
+
 this.setState({
   array:temp,
   arraySteps:[temp],
@@ -74,6 +79,8 @@ this.setState({
 },()=>{
   this.generateSteps();
 })
+console.log(temp);
+
 }
 
 changeArray = (index, value) =>{
@@ -135,6 +142,7 @@ start = () => {
     timeouts: timeouts,
   });
 };
+
 render(){
   let bars = this.state.array.map((value,index)=>{
      return(

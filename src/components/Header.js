@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React from "react";
 import "./header.css";
 
 const Header = () => {
@@ -11,16 +11,16 @@ const Header = () => {
         </div>
         <ul  className="signin-up">
           <li>
-            <a href="#">Bubble Sort</a>
+            <a href="/bubble">Bubble Sort</a>
           </li>
           <li>
-            <a href="#">Selection Sort</a>
+            <a href="/seclection">Selection Sort</a>
           </li>
           <li>
-            <a href="#">Quick Sort</a>
+            <a href="quick">Quick Sort</a>
           </li>
           <li>
-            <a href="#">Merge Sort</a>
+            <a href="merge">Merge Sort</a>
           </li>
         </ul>
       </div>

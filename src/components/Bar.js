@@ -7,9 +7,6 @@ function Bar({index,length,color,changeArray}) {
         setLen(length);
     }, [length]);
 
-    let barStyles ={
-        height:length
-    }
 
     const inputStyle = {
 		position: 'relative',
@@ -32,14 +29,14 @@ function Bar({index,length,color,changeArray}) {
 		transition: '0.3s',
 	};
 
-        const front={
-            height:'${300-lenght}px',
-            transform:`translateY(${300-length}px) `,
-            backgroundColor: `${colors[color][0]}`,
-            boxShadow: `5px 5px 50px 5px ${colors[color][1]}`,
-            transition: '0.3s',  
-            height:`${length}px`,
-        }
+    const front={
+        height:'${300-lenght}px',
+        transform:`translateY(${300-length}px) `,
+        backgroundColor: `${colors[color][0]}`,
+        boxShadow: `5px 5px 50px 5px ${colors[color][1]}`,
+        transition: '0.3s',  
+        height:`${length}px`,
+    }
       
 
     const front_back_right_left ={
